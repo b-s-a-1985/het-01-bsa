@@ -1,0 +1,122 @@
+<header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+
+
+- - - 
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+<a href='javascript:;' onClick={() => console.log("tojásrántotta")}>Rántotta</a>  //OK
+<a href='javascript:;' onClick="recipe_rantotta();">Rántotta</a> | 
+        <a href='javascript:;' onClick="recipe_porkoltlt();">Pörkölt</a> | 
+        <a href='javascript:;' onClick="recipe_tokfozelek();">Tökfőzelék</a> |
+        <button onClick={() => "rántotta"}>rántotta</button>
+
+//ezajó
+<a href='javascript:;' onClick={() => createRecipe(rantotta)}>Rántotta</a>  {"  "}
+        <a href='javascript:;' onClick={() => createRecipe(marhaporkolt)}>Marhapörkölt</a>  {"  "}
+        <a href='javascript:;' onClick={() => createRecipe(tokfozelek)}>Tökfőzelék</a>
+        {" "} <a href='javascript:;' onClick={() => fetchJSONData()}>Betöltés</a>  {"  "}
+
+
+
+Így definiálunk komponenst
+function Welcome(props){
+  return <h1>Hello {props.name}</h1>
+}
+
+
+
+----------------
+
+function fetchJSONData() {
+  fetch("./components/receipes.json")
+      .then((res) => {
+          if (!res.ok) {
+              throw new Error
+                  (`HTTP error! Status: ${res.status}`);
+          }
+          return res.json();
+      })
+      .then((data) => 
+            console.log(data))
+      .catch((error) => 
+             console.error("Unable to fetch data:", error));
+}
+fetchJSONData();
+
+------------------
+
+[
+        {
+            id: 1,
+            name: "Rántotta",
+            ingredients: [
+            "2 tojás, ",
+            "egy csipet só"
+            ],
+            instructions: "Feltörjük, megsütjük, finom lesz",
+            difficulty: 3
+        }
+    ]
+
+
+    --------------------
+{
+          recipes.map((data) => (
+            <Recipe key={data.id} 
+                    name={data.name} 
+                    ingredients={data.ingredients} 
+                    instructions={data.instructions}
+                    difficulty={data.difficulty}/>
+          ))
+        }

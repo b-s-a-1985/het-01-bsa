@@ -1,0 +1,45 @@
+[
+    {
+        "key": 1,
+        "name": "Rántotta",
+        "ingredients": [
+            "2 tojás, ",
+            "egy csipet só"
+        ],
+        "instructions": "Feltörjük, megsütjük, finom lesz.",
+        "difficulty": 3
+    },
+    {
+        "key": 2,
+        "name": "Marhapörkölt",
+        "ingredients": [
+            "fiatal marhahús, ",
+            "vöröshagyma, ",
+            "köménymag, ",
+            "enyhén csípős őrölt pirospaprika, ",
+            "só"
+        ],
+        "instructions": "Felaprózzuk a húst, sokáig főzzük, ha lehet bográcsban.",
+        "difficulty": 4
+    },
+    {
+        "key": 3,
+        "name": "Tökfőzelék",
+        "ingredients": [
+            "fiatal tök, ",
+            "vöröshagyma, ",
+            "étolaj, ",
+            "kevés liszt, ",
+            "víz, ",
+            "ecet, ",
+            "kapor, ",
+            "tejföl, ",
+            "só"
+        ],
+        "instructions": "Megreszeljük a tököt, megpirítjuk az apróra vágott vöröshagymát, felönjük vízzel, főzzük, behabarjuk.",
+        "difficulty": 2
+    }
+]
+
+
+  
